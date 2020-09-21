@@ -89,7 +89,7 @@ class Game {
 
             // scroll for mobile screens, to see the result
             if (window.innerWidth <= 500) {
-                document.querySelector('footer').scrollIntoView({ behavior: 'smooth', block: 'end' })
+                setTimeout(() => document.querySelector('footer').scrollIntoView({ behavior: 'smooth', block: 'end' }), 500)
             }
         }, this.delay + 7500) // delay for animations 
     }
