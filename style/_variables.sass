@@ -1,0 +1,39 @@
+$dark-bg: #020024
+$mid-bg: #090979
+$light-bg: #00d4ff
+$light-grey: #aaa
+$bright-orange: #f12711
+
+$font-title: 'Bangers', cursive
+$font-regular: 'Sarabun', sans-serif
+$box-shadow: 3px 3px 6px #474646
+
+$bgi: linear-gradient(90deg, #f12711, #f5af19)
+
+$border-width: 4px
+$border: $border-width solid #000
+$input-width: 200px
+
+$draw-height: 200px
+$draw-width: 150px
+
+$panel-gradient: linear-gradient(120deg, #353434 , #4e4e4e)
+
+/* this should be equal to the dealy property in Game.js */
+$animation-length: 1s
+
+@mixin tablet-big
+  @media (max-width: 1200px)
+    @content
+
+@mixin tablet
+  @media (max-width: 900px)
+    @content
+
+@mixin mobile
+  @media (max-width: 500px)
+    @content
+
+@mixin mobile-small
+  @media (max-width: 360px)
+    @content

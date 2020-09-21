@@ -1,0 +1,139 @@
+/* Modal - instrukcje */
+
+section.welcome
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background-color: rgba(0,0,0,.6)
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  transition: all 1s
+  z-index: 2
+
+  @include mobile
+    align-items: start
+    padding-top: 10vh
+
+div.modal
+  position: relative
+  width: 60%
+  height: 60%
+
+  background-color: #fff
+  border: 3px solid black
+  border-radius: 20px
+  font-size: 2rem
+
+  padding: 20px
+
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  @include tablet
+    width: 80%
+    height: 80vh
+
+button#lang
+  position: absolute
+  width: 40px
+  height: 40px
+  right: 40px
+
+  background-color: transparent
+  border: 2px solid black
+  border-radius: 20px
+  font-style: italic
+  font-weight: 600
+
+  outline: none
+  cursor: pointer
+
+  box-shadow: 2px 2px 4px #777777
+
+  @include tablet
+    right: 15px
+    top: 15px
+
+  &:hover
+    border-color: #f12711
+    background-color: rgba(241, 39, 17, .4)
+    box-shadow: 0 0 5px #f12711
+    color: #f12711
+
+h2
+  margin-bottom: 20px
+  padding-bottom: 20px
+  border-bottom: 1px solid #aaa
+
+  @include mobile
+    padding-right: 40px
+
+div.modal p
+  font-size: 1.8rem
+  margin-bottom: 10px
+
+  @include mobile
+    font-size: 1.2rem
+
+  &.instructions
+    padding-bottom: 30px
+    border-bottom: 1px solid #aaa
+
+  &.wallet
+    @include mobile
+      padding: 20px 0
+      margin-bottom: 0
+      justify-content: space-between
+
+span.chooseCash
+  display: inline-block
+  margin: 0 20px
+  font-size: 2.5rem
+
+  @include mobile
+    display: block
+    margin: 30px 0
+    font-size: 1.5rem
+
+button.walletBtn, button#play
+  border: 2px solid black
+  padding: 5px 10px
+  border-radius: 4px
+  background-color: #fff
+  margin: 0 10px
+  cursor: pointer
+  margin-top: 0
+
+  font-size: 2rem
+  font-weight: bold
+  box-shadow: 2px 2px 4px #777777
+
+  @include mobile
+    font-size: 1.2rem
+    padding: 2px 5px
+
+  &:hover
+    border-color: rgb(245, 175, 25)
+    background-color: rgba(245, 175, 25,.5)
+    box-shadow: 0 0 5px rgb(245, 175, 25)
+    color: rgb(245, 175, 25)
+
+  &:focus
+    outline: #f12711
+
+span.welcome
+  display: inline-block
+  padding-top: 5px
+
+span
+  &#walletValue, &#currency
+    color: #f12711
+
+    @include mobile
+      font-size: 1.6rem

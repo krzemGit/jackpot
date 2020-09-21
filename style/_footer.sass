@@ -1,0 +1,46 @@
+footer
+  background-image: $bgi
+  border-top: 3px solid #000000
+  min-height: 80px
+
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+
+  display: flex
+  justify-content: center
+
+  padding-top: 20px
+  font-size: 2.5rem
+
+  @include mobile-small
+    font-size: 1.5rem
+    padding-left: 10px
+
+  .divisor
+    width: 3px
+    height: 2.5rem
+
+    margin: 4px 0 0 20px
+
+    background-color: #000000
+    border-radius: 1px
+
+    @include mobile-small
+      height: 1.5rem
+
+  .icons
+    width: 100px
+    display: flex
+    justify-content: space-evenly
+
+    a
+      color: #000000
+      text-decoration: none
+
+      &:hover
+        color: $bright-orange
+
+        svg
+          filter: drop-shadow(0 0 5px $bright-orange)

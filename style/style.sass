@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Sarabun:ital,wght@0,400;0,600;1,400;1,600&display=swap')
+
+@import 'variables'
+@import 'logo'
+@import 'modal'
+@import 'title'
+@import 'game'
+@import 'controls'
+@import 'footer'
+
+// reset and general styling
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 10px
+  font-family: $font-regular
+
+body
+  position: relative
+
+.wrap
+  position: relative
+  background-color: #fff
+  min-height: 100vh
+  padding-bottom: 100px // for footer
+
+  &.is-blurred
+    filter: blur(4px)
+
+section
+  text-align: center
+  font-size: 1.5rem
+
+h1, h2
+  font-family: $font-title
+
+span
+  font-weight: 500

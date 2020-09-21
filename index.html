@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednoręki Bandyta</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main class="wrap is-blurred">
+        <section class="title">
+            <div class="header__logo js-logo"><span>OOP</span><span>JS</span><span>games</span></div>
+            <h1 class="gametitle">jednoręki bandyta</h1>
+        </section>
+        <section class="game">
+            <!-- mask for hiding symbols during the draws, data-number useful for calculating spin -->
+            <div class="color">
+                <div class="mask">?</div>
+                <div class="symbol" data-number="1"></div>
+                <div class="symbol" data-number="2"></div>
+                <div class="symbol" data-number="3"></div>
+                <div class="symbol" data-number="4"></div>
+                <div class="symbol" data-number="5"></div>
+                <div class="symbol" data-number="6"></div>
+                <div class="symbol" data-number="7"></div>
+                <div class="symbol" data-number="8"></div>
+                <div class="symbol" data-number="9"></div>
+                <div class="symbol" data-number="10"></div>
+                <div class="symbol" data-number="11"></div>
+                <div class="symbol" data-number="12"></div>
+                <div class="symbol" data-number="13"></div>
+                <div class="symbol" data-number="14"></div>
+                <div class="symbol" data-number="15"></div>
+                <div class="symbol" data-number="16"></div>
+                <div class="symbol" data-number="17"></div>
+                <div class="symbol" data-number="18"></div>
+                <div class="symbol" data-number="19"></div>
+                <div class="symbol" data-number="20"></div>
+                <div class="symbol" data-number="21"></div>
+                <div class="symbol" data-number="22"></div>
+                <div class="symbol" data-number="23"></div>
+            </div>
+            <div class="color">
+                <div class="mask">?</div>
+                <div class="symbol" data-number="1"></div>
+                <div class="symbol" data-number="2"></div>
+                <div class="symbol" data-number="3"></div>
+                <div class="symbol" data-number="4"></div>
+                <div class="symbol" data-number="5"></div>
+                <div class="symbol" data-number="6"></div>
+                <div class="symbol" data-number="7"></div>
+                <div class="symbol" data-number="8"></div>
+                <div class="symbol" data-number="9"></div>
+                <div class="symbol" data-number="10"></div>
+                <div class="symbol" data-number="11"></div>
+                <div class="symbol" data-number="12"></div>
+                <div class="symbol" data-number="13"></div>
+                <div class="symbol" data-number="14"></div>
+                <div class="symbol" data-number="15"></div>
+                <div class="symbol" data-number="16"></div>
+                <div class="symbol" data-number="17"></div>
+                <div class="symbol" data-number="18"></div>
+                <div class="symbol" data-number="19"></div>
+                <div class="symbol" data-number="20"></div>
+                <div class="symbol" data-number="21"></div>
+                <div class="symbol" data-number="22"></div>
+                <div class="symbol" data-number="23"></div>
+            </div>
+            <div class="color">
+                <div class="mask">?</div>
+                <div class="symbol" data-number="1"></div>
+                <div class="symbol" data-number="2"></div>
+                <div class="symbol" data-number="3"></div>
+                <div class="symbol" data-number="4"></div>
+                <div class="symbol" data-number="5"></div>
+                <div class="symbol" data-number="6"></div>
+                <div class="symbol" data-number="7"></div>
+                <div class="symbol" data-number="8"></div>
+                <div class="symbol" data-number="9"></div>
+                <div class="symbol" data-number="10"></div>
+                <div class="symbol" data-number="11"></div>
+                <div class="symbol" data-number="12"></div>
+                <div class="symbol" data-number="13"></div>
+                <div class="symbol" data-number="14"></div>
+                <div class="symbol" data-number="15"></div>
+                <div class="symbol" data-number="16"></div>
+                <div class="symbol" data-number="17"></div>
+                <div class="symbol" data-number="18"></div>
+                <div class="symbol" data-number="19"></div>
+                <div class="symbol" data-number="20"></div>
+                <div class="symbol" data-number="21"></div>
+                <div class="symbol" data-number="22"></div>
+                <div class="symbol" data-number="23"></div>
+            </div>
+        </section>
+        <section class="game-control">
+            <div class="play">
+                <input type="number" placeholder="Podaj Stawkę" id="bid">
+                <button id="start">Zakręć!</button>
+            </div>
+            <div class="results">
+                <div class="panel">
+                    <h1 id="cashTitle"><span id="cashInfo">TWOJE ŚRODKI PRZED KOLEJNĄ GRĄ TO:</span> <span
+                            class="wallet"></span> $</h1>
+                </div>
+                <div class="score">
+                    <span class="result"></span> Za Tobą <span class="number"></span> gier,
+                    w tym <span class="win"></span> wygranych
+                    oraz <span class="loss"></span> przegranych.
+                </div>
+                <p id="result"></p>
+            </div>
+        </section>
+        <footer>
+            <span>KrzemDev Games Inc.</span><span class="divisor"></span><span class="icons">
+                <a href="https://github.com/krzemGit/jackpot"><i class="fab fa-github"></i></a>
+                <a href="https://www.dropbox.com/s/eotb3hjau41fw3o/jackpot.jpg?raw=1"><i class="fab fa-figma"></i></a>
+            </span>
+        </footer>
+    </main>
+    <!-- Welcome section -->
+    <section class="welcome">
+        <div class="modal">
+            <button id="lang">Lang</button>
+            <p class="instructions">Instrukcje do gry</p>
+            <p class="wallet">
+                <button class="walletBtn" id="minus100">-100</button>
+                <button class="walletBtn" id="minus10">-10</button>
+                <button class="walletBtn" id="minus1">-1</button>
+                <span class="chooseCash">
+                    <span id="walletValue" class="welcome">0</span> <span id="currency" class="welcome"> $ </span>
+                </span>
+                <button class="walletBtn" id="plus1">+1</button>
+                <button class="walletBtn" id="plus10">+10</button>
+                <button class="walletBtn" id="plus100">+100</button>
+
+            </p>
+            <p class="start"><button id="play">Rozpocznij grę!</button></p>
+        </div>
+    </section>
+    <!-- serverless game, so no imports in particular files -->
+    <script src="components/Lang.js"></script>
+    <script src="components/Wallet.js"></script>
+    <script src="components/Statistics.js"></script>
+    <script src="components/Draw.js"></script>
+    <script src="components/Result.js"></script>
+    <script src="components/Visuals.js"></script>
+    <script src="components/Game.js"></script>
+    <script src="components/Welcome.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

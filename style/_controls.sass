@@ -1,0 +1,119 @@
+.game-control
+  padding: 20px 20%
+  display: flex
+  justify-content: space-between
+
+  @include tablet-big
+    padding: 20px 10%
+
+  @include tablet
+    padding: 20px 5%
+
+  @include mobile
+    padding: 20px 5%
+    flex-direction: column
+
+  .play
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex-basis: 40%
+
+    padding: 20px
+    border-radius: 10px
+    border: $border
+    box-shadow: $box-shadow
+
+    @include mobile
+      margin-bottom: 50px
+
+  .results
+    flex-basis: 55%
+
+    padding: 20px
+    border-radius: 10px
+
+    border: $border
+    box-shadow: $box-shadow
+
+    text-align: left
+    font-size: 1.5rem
+    letter-spacing: 1px
+
+    p
+      margin: 10px
+
+      &#result
+        margin-top: 30px
+        margin-left: 0
+        font-family: $font-title
+        font-size: 2rem
+
+        opacity: 1
+        transition: all .5s
+
+        &.hidden
+          opacity: 0
+
+    #cashTitle
+      text-align: left
+      margin-bottom: 25px
+
+    .wallet, .result, .number, .win, .loss
+      color: $bright-orange
+      text-shadow: 0 0 5px $bright-orange
+
+input#bid
+  display: block
+  margin: 20px auto
+  text-align: center
+  padding: 10px 20px
+  border: 2px solid #555
+  color: #555
+  border-radius: 15px
+  background-color: transparent
+  font-size: 1.5rem
+  font-family: $font-title
+  width: $input-width
+
+  &::placeholder
+    color: #555
+
+  &:focus
+    border-color: $bright-orange
+    box-shadow: 0 0 5px $bright-orange, inset 0 0 5px $bright-orange
+    color: $bright-orange
+    text-shadow: 0 0 5px $bright-orange
+    outline: none
+
+    &::placeholder
+      color: $bright-orange
+
+button#start
+  background-image: $bgi
+  font-family: $font-title
+  font-size: 1.6rem
+  text-transform: capitalize
+  letter-spacing: 2px
+  color: #ddd
+  padding: 10px 50px
+  margin: 0 35px 20px
+  border: 1px solid #fff
+  border-radius: 15px
+  box-shadow: 2px 2px 4px #777
+  cursor: pointer
+
+  width: $input-width
+
+button#start:hover
+  border-color: $bright-orange
+  color: $bright-orange
+  text-shadow: 0 0 8px $bright-orange
+  box-shadow: 0 0 5px $bright-orange
+
+button#start.disabled
+  color: #777
+  background-image: none
+  background-color: #333
+  border-color: #777
+  cursor: not-allowed
